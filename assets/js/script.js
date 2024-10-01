@@ -2,6 +2,37 @@
 
 jQuery(document).ready(function($) {
 
+  $('.youtube-container').on('click', function() {
+    var videoId = $(this).find('.youtube-thumbnail').data('id');
+    
+    // Create the iframe element
+    var iframe = $('<iframe>', {
+      src: "https://www.youtube.com/embed/" + videoId + "?autoplay=1&rel=0",
+      allow: 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share',
+      allowfullscreen: true,
+      frameborder: 0,
+      css: {
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        top: 0,
+        left: 0
+      }
+    });
+    
+    // Clear the current content and add the iframe
+    $(this).html(iframe);
+    
+    // Ensure the container expands to show the iframe
+    $(this).css({
+      'padding-bottom': '56.25%', // 16:9 aspect ratio
+      'height': '0',
+      'position': 'relative',
+      'overflow': 'hidden'
+    });
+  });
+  
+
   // Sticky Header
   $(window).scroll(function(){
     var sticky = $('header'),

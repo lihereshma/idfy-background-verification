@@ -75,6 +75,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "NeueHaasDisplay-Roman";
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -316,12 +317,6 @@ header.fixed {
   position: relative;
 }
 
-.banner-media iframe {
-  width: 100%;
-  height: 12em;
-  position: relative;
-}
-
 .banner-media:after {
   background: url(../images/IDfy-red-square.webp) no-repeat bottom right/contain;
   content: '';
@@ -331,6 +326,64 @@ header.fixed {
   bottom: -4em;
   right: -4em;
   z-index: -1;
+}
+
+.banner-media .youtube-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.banner-media .youtube-thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/youtube-overlay-image.webp);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.banner-media .play-button { 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px; 
+  -webkit-transform: translate(-50%, -50%); 
+  -ms-transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%); 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; 
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.banner-media .play-button:after {
+  content: '\f144';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 3.5em;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.banner-media .play-button:hover:after {
+  font-size: 4em;
 }
 
 /*=================================
@@ -1040,10 +1093,6 @@ footer {
 @media only screen and (min-width: 1024px) {
   .banner-section .col {
     width: 45%;
-  }
-
-  .banner-media iframe {
-    height: 20em;
   }
 
   .banner-content h1 {
