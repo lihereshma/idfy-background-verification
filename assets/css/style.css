@@ -323,7 +323,7 @@ header.fixed {
 }
 
 .banner-media:after {
-  background: url(/assets/images/IDfy-red-square.webp) no-repeat bottom right/contain;
+  background: url(../images/IDfy-red-square.webp) no-repeat bottom right/contain;
   content: '';
   position: absolute;
   width: 100%;
@@ -342,7 +342,7 @@ header.fixed {
 =================================*/
 
 .stages-section {
-  background: url(/assets/images/dotted-circle.webp) no-repeat 240% 120%/20em;
+  background: url(../images/dotted-circle.webp) no-repeat 240% 120%/20em;
 }
 
 .stages-section .col-wrap {
@@ -390,7 +390,7 @@ header.fixed {
 }
 
 .stages-wrap .stage .stage-number span {
-  background: url(/assets/images/IDfy-Branding-Elements-52.webp) center/contain;
+  background: url(../images/IDfy-Branding-Elements-52.webp) center/contain;
   width: 1.5em;
   height: 1.5em;
   font-size: 3em;
@@ -779,7 +779,7 @@ header.fixed {
 }
 
 .contact-section .col-wrap:after {
-  background: url(/assets/images/dotted-circle.webp) no-repeat center;
+  background: url(../images/dotted-circle.webp) no-repeat center;
   content: '';
   position: absolute;
   top: -3em;
@@ -1030,7 +1030,7 @@ footer {
   }
 
   .testimonials-section {
-    background-image: url(/assets/images/IDfy-red-square.webp);
+    background-image: url(../images/IDfy-red-square.webp);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 20em;
